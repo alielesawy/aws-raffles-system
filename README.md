@@ -38,7 +38,7 @@ To use the project, follow these steps:
 - ![ACM Icon](icons/CertificateManager.svg) **AWS Certificate Manager**: Manages SSL/TLS certificates for secure communication.
 - ![Route 53 Icon](icons/Route53.svg) **Amazon Route 53**: Manages DNS and routes traffic to the CloudFront distribution.
 
-## Setup Instructions
+## Project throughout
 1. **Create DynamoDB Table**:
    - Use the provided script to create a DynamoDB table with the necessary attributes.
    - Ensure the table has `email` as the partition key, and additional attributes for `phone_number` and `full_name`.
