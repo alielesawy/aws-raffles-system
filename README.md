@@ -1,22 +1,91 @@
-# aws-raffles-system
-Raffles  app is a serverless application to drawing the winner from sample of people deployed on AWS using DynamoDB , Lambda , API Getaway and S3 
+# AWS Raffles System
+![AWS Icon](icons/icons8-aws1.svg)
 
-------------------------------------------------------------
-## Steps throughout the project 
-1. Create simple HTML and CSS page
-2. Create project diagram
-3. Create DynamoDB table
-4. Create Lambda Function
-5. Create API Gateway
-6. Enable mutal TLS autentications
-7. Host HTML page on S3 and CloudFront
+<style>
+    h1, h2, h3 {
+        color: #FF9900;
+    }
+    p, li {
+        color:rgb(249, 249, 249);
+    }
+    code {
+        background-color:rgb(28, 61, 125);
+        padding: 2px 4px;
+        border-radius: 4px;
+    }
+</style>
+## Project Overview
+The AWS Raffles System is a serverless application designed to manage raffle entries and draw winners. This project leverages various AWS services to create a scalable, secure, and efficient system.
 
-## Diagram
+## Features
+1. **Simple HTML and CSS Page**: A user-friendly interface for participants to enter the raffle.
+2. **DynamoDB Table**: Stores raffle entries with participant details.
+3. **Lambda Function**: Handles backend logic for processing entries and drawing winners.
+4. **API Gateway**: Exposes APIs for the frontend to interact with the backend services.
+5. **Mutual TLS Authentication**: Ensures secure communication between clients and the API Gateway.
+6. **Hosting on S3 and CloudFront**: Serves the HTML page with low latency and high availability.
 
+## Resource was Created usin9 boto3
+To use the project, follow these steps:
 
+1. **Install boto3**:
+    ```sh
+    pip install boto3
+    ```
 
-## AWS services I used
-![S3 Icon](icons/Res_Amazon-Simple-Storage-Service_Bucket-With-Objects_48.png)  ![API Icon](icons/Res_Amazon-API-Gateway_Endpoint_48.png) ![CloudFront Icon](icons/Res_Amazon-CloudFront_Edge-Location_48.png) ![Lambda Icon](icons/Res_AWS-Lambda_Lambda-Function_48.png)  ![VPC Icon](icons/Res_Amazon-VPC_Virtual-private-cloud-VPC_48.png) ![DynamoDB Icon](icons/Res_Amazon-DynamoDB_Table_48.png) ![API Icon](icons/Res_Amazon-Route-53_Resolver_48.png) 
+2. **Install AWS CLI**:
+    Follow the instructions [here](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html) to install the AWS CLI.
 
+3. **Configure AWS CLI**:
+    ```sh
+    aws configure
+    ```
+    Provide your AWS access key, secret key, region, and output format when prompted.
 
+## AWS Services Used
+- ![S3 Icon](icons/SimpleStorageService.svg) **Amazon S3**: Hosts the static HTML and CSS files.
+- ![API Icon](icons/APIGateway.svg) **Amazon API Gateway**: Manages API requests and routes them to the appropriate Lambda functions.
+- ![CloudFront Icon](icons/CloudFront.svg) **Amazon CloudFront**: Distributes the content globally with low latency.
+- ![Lambda Icon](icons/Lambda.svg) **AWS Lambda**: Executes backend logic without provisioning servers.
+- ![DynamoDB Icon](icons/DynamoDB.svg) **Amazon DynamoDB**: Stores raffle entries in a NoSQL database.
+- ![ACM Icon](icons\CertificateManager.svg) **AWS Certificate Manager**: Manages SSL/TLS certificates for secure communication.
+- ![Route 53 Icon](icons/Route53.svg) **Amazon Route 53**: Manages DNS and routes traffic to the CloudFront distribution.
 
+## Setup Instructions
+1. **Create DynamoDB Table**:
+   - Use the provided script to create a DynamoDB table with the necessary attributes.
+   - Ensure the table has `email` as the partition key, and additional attributes for `phone_number` and `full_name`.
+
+2. **Create 3 Lambda Functions**:
+   - For adding record to DynamoDB table
+   - To get the count of records on the Table
+   - To Draw the winners
+
+3. **Create API Gateway**:
+   - Set up API Gateway to expose the necessary endpoints for the frontend to interact with the backend.
+
+4. **Configure Mutual TLS Authentication**:
+    - **Generate SSL/TLS Certificates**:
+        - Download and install OpenSSL from [here](https://www.openssl.org/source/).
+        - Follow these steps to generate a self-signed certificate:
+          ```sh
+          openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -nodes
+          ```
+        - Provide the necessary information when prompted, such as country, state, and organization name.
+        - Use the generated `key.pem` and `cert.pem` files for mutual TLS authentication.
+    - **Enable Mutual TLS Authentication**:
+        - Configure mutual TLS authentication on the API Gateway to secure communication.
+        - For detailed instructions, see the following [documentation](https://aws.amazon.com/ar/blogs/compute/introducing-mutual-tls-authentication-for-amazon-api-gateway/).
+
+5. **Host HTML Page on S3 and CloudFront**:
+   - Upload your HTML and CSS files to an S3 bucket.
+   - Set up a CloudFront distribution to serve the content globally.
+
+## Contributing
+Contributions are welcome! Please fork the repository and submit a pull request with your changes.
+
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+For any questions or inquiries, please contact [here](mailto:alielesawy811@gmail.com).
