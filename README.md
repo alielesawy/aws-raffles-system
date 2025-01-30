@@ -1,19 +1,6 @@
 # AWS Raffles System
 ![AWS Icon](icons/icons8-aws1.svg)
 
-<style>
-    h1, h2, h3 {
-        color: #FF9900;
-    }
-    p, li {
-        color:rgb(249, 249, 249);
-    }
-    code {
-        background-color:rgb(28, 61, 125);
-        padding: 2px 4px;
-        border-radius: 4px;
-    }
-</style>
 ## Project Overview
 The AWS Raffles System is a serverless application designed to manage raffle entries and draw winners. This project leverages various AWS services to create a scalable, secure, and efficient system.
 
