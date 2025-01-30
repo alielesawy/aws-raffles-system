@@ -35,7 +35,7 @@ To use the project, follow these steps:
 - ![CloudFront Icon](icons/CloudFront.svg) **Amazon CloudFront**: Distributes the content globally with low latency.
 - ![Lambda Icon](icons/Lambda.svg) **AWS Lambda**: Executes backend logic without provisioning servers.
 - ![DynamoDB Icon](icons/DynamoDB.svg) **Amazon DynamoDB**: Stores raffle entries in a NoSQL database.
-- ![ACM Icon](icons\CertificateManager.svg) **AWS Certificate Manager**: Manages SSL/TLS certificates for secure communication.
+- ![ACM Icon](icons/CertificateManager.svg) **AWS Certificate Manager**: Manages SSL/TLS certificates for secure communication.
 - ![Route 53 Icon](icons/Route53.svg) **Amazon Route 53**: Manages DNS and routes traffic to the CloudFront distribution.
 
 ## Setup Instructions
