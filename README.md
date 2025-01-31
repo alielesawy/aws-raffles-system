@@ -67,7 +67,11 @@ To use the project, follow these steps:
 5. **Host HTML Page on S3 and CloudFront**:
    - Upload your HTML and CSS files to an S3 bucket.
    - Set up a CloudFront distribution to serve the content globally.
+## Demo
+### Video Demo
+Watch the project demo video below to see the AWS Raffles System in action:
 
+![Project Demo](icons/PROJECTDEMO.mp4)
 ## Contributing
 Contributions are welcome! Please fork the repository and submit a pull request with your changes.
 
