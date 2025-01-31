@@ -82,7 +82,7 @@ To use the project, follow these steps:
 ### Video Demo
 Watch the project demo video below to see the AWS Raffles System in action:
 
-![Watch the video](https://img.youtube.com/vi/)
+[![Watch the video](https://img.youtube.com/vi/9qJMTd4EzAI/0.jpg)](https://www.youtube.com/watch?v=9qJMTd4EzAI)
 
 ## Contributing
 Contributions are welcome! Please fork the repository and submit a pull request with your changes.
