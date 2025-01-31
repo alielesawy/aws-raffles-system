@@ -12,7 +12,18 @@ The AWS Raffles System is a serverless application designed to manage raffle ent
 5. **Mutual TLS Authentication**: Ensures secure communication between clients and the API Gateway.
 6. **Hosting on S3 and CloudFront**: Serves the HTML page with low latency and high availability.
 
-## Resource was Created usin9 boto3
+## Automation
+This project automates 90% of the setup steps, including:
+
+1. **DynamoDB Table Creation**: Automatically creates the DynamoDB table with the required attributes.
+2. **Lambda Functions Deployment**: Deploys the necessary Lambda functions for handling raffle entries, counting records, and drawing winners.
+3. **API Gateway Configuration**: Sets up the API Gateway with the required endpoints and mutual TLS authentication.
+4. **SSL/TLS Certificates Generation**: Automates the generation of self-signed SSL/TLS certificates using OpenSSL.
+5. **S3 and CloudFront Setup**: Configures S3 for hosting the HTML page and sets up CloudFront for global content distribution.
+
+This automation significantly reduces the manual effort required to set up the project, allowing you to focus on customization and enhancements.
+
+## Resource was Created using boto3
 To use the project, follow these steps:
 
 1. **Install boto3**:
@@ -71,7 +82,8 @@ To use the project, follow these steps:
 ### Video Demo
 Watch the project demo video below to see the AWS Raffles System in action:
 
-![Project Demo](icons/PROJECTDEMO.mp4)
+![Watch the video](https://img.youtube.com/vi/)
+
 ## Contributing
 Contributions are welcome! Please fork the repository and submit a pull request with your changes.
 
